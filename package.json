@@ -14,10 +14,14 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/node": "24.0.0",
+    "@types/react": "19.1.8",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8",
-    "tailwindcss-cli": "^0.1.2"
+    "tailwindcss-cli": "^0.1.2",
+    "@tailwindcss/postcss": "^4.1.9",
+    "typescript": "5.8.3"
   },
   "dependencies": {
     "next": "^15.3.3",
