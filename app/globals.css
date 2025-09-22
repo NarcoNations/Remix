@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light clean template tokens */
+:root{
+  --bg:#ffffff;
+  --fg:#0b0f15;
+  --primary:#4f46e5;
+  --panel:#f8fafc;
+  --ring:#111827;
+}
+
+html:focus-within { scroll-behavior: smooth; }
+* { accent-color: var(--primary); }
+body { @apply bg-bg text-fg antialiased; }
+.focus-ring { outline: 2px solid var(--ring); outline-offset: 3px; border-radius: .75rem; }
+
+@layer base {
+  body {
+    @apply min-h-screen bg-bg text-fg antialiased;
+  }
+  a {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+  button, [role="button"], input, textarea, select {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+}
+
+@layer utilities {
+  .glass {
+    backdrop-filter: blur(16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
